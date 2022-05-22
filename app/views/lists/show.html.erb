@@ -1,8 +1,7 @@
 <div class="position-relative">
-
-    <h1><%= @list.name %></h1>
-  </div>
-    <span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
+  <h1><%= @list.name %></h1>
+</div>
+<span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
 </div>
 <div class="container mb-5">
   <div class="d-flex justify-content-between my-4">
@@ -32,9 +31,7 @@
           </div>
         </div>
       </div>
-    <% end %>
+   <% end %>
   </div>
   <hr class="my-5">
-
-
-<%= render "bookmarks/new", list: @list %>
+  <%= render "bookmarks/new", list: @list %>
