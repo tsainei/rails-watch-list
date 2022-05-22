@@ -1,0 +1,11 @@
+
+<% @list.movies.each do |movie| %>
+<% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+<% image_tag movie.poster_url, alt: movie.title %>
+<% movie.title %>
+<% movie.overview %>
+<small class="text-right flex-shrink-0"><%= link_to "delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"}, class: 'text-danger' %></small>
+<% end %>
+
+
+<%= render "bookmarks/new", list: @list %>

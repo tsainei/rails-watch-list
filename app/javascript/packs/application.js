@@ -4,10 +4,22 @@
 // that code so it'll be compiled.
 
 import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
+import "@hotwired/turbo-rails"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import "bootstrap";
+import { reference } from "@popperjs/core";
+
+import "controllers"
 
 Rails.start()
-Turbolinks.start()
+//Turbolinks.start()
 ActiveStorage.start()
+
+
+//import { initSelect2 } from '../components/init_select2';
+
+document.addEventListener("turbolinks:load", function() {
+  //initSelect2();
+});
+//rails g model bookmark comment list:references movie:references
